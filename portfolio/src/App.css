@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+
+:root {
+  --text-font-family: "Poppins", sans-serif;
+  --primary: #00a3e1;
+}
+a {
+  text-decoration: none !important;
+}
+.myProfile h5::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  content: "";
+  z-index: -1;
+}
+body {
+  font-size: 15px;
+  font-family: var(--text-font-family);
+}
+body p {
+  text-align: justify;
+}
+#home {
+  background-image: linear-gradient(rgb(255 255 255 / 90%),rgb(255 255 255 / 90%)), url(https://cdn.pixabay.com/photo/2019/10/09/07/28/development-4536630_960_720.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.animate {
+  position: relative;
+  opacity: 1;
+  top: 0;
+  animation: fadeup 2s linear;
+}
+@keyframes fadeup {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+#about {
+  /* height: 100vh; */
+}
+#about .features p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.personalInfo li {
+  font-size: 1.3em;
+}
+#about::before {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/004/578/727/large_2x/men-insert-ideas-into-blog-and-web-content-free-vector.jpg);
+  background-size: contain;
+  background-position: right;
+  height: 90%;
+  width: 90%;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  z-index: -1;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  animation: bounce 2s alternate linear infinite;
+}
+@keyframes bounce {
+  100% {
+    top: 10px;
+  }
+}
+section h3 {
+  border-color: var(--primary) !important;
+}
+.border-2{
+    border-color: var(--primary) !important;
+}
+body h3::before,
+body h3::after {
+  position: absolute;
+  content: "";
+  background-color: var(--primary);
+  width: 2px;
+  height: 5px;
+  bottom: 0;
+}
+body h3:before {
+  left: 0;
+}
+body h3::after {
+  right: 0;
+}
+
+.resume-section {
+  background-color: #fbfbfb;
+}
+
+.resume-section ul.education,
+.resume-section ul.experience {
+  margin: 20px 0 50px;
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 50px;
+  width: 100%;
+}
+
+.resume-section ul.education li,
+.resume-section ul.experience li {
+  position: relative;
+  margin-left: 10px;
+  padding: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.resume-section ul.education li:not(:first-child),
+.resume-section ul.experience li:not(:first-child) {
+  margin-top: 60px;
+}
+
+.resume-section ul.education li span.line-left,
+.resume-section ul.experience li span.line-left {
+  width: 2px;
+  height: 100%;
+  background-color: var(--primary);
+  left: -10px;
+  top: 0;
+  position: absolute;
+}
+
+.resume-section ul.education li span.line-left:before,
+.resume-section ul.education li span.line-left:after,
+.resume-section ul.experience li span.line-left:before,
+.resume-section ul.experience li span.line-left:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  position: absolute;
+  left: -4px;
+  top: -10px;
+}
+
+.resume-section ul.education li span.line-left:after,
+.resume-section ul.experience li span.line-left:after {
+  top: 100%;
+}
+
+.resume-section .education .content,
+.resume-section .experience .content {
+  margin-left: 10px;
+}
+
+.resume-section .education .content h4,
+.resume-section .experience .content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.resume-section .education .content h5,
+.resume-section .experience .content h5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.resume-section .education .content p.info,
+.resume-section .experience .content p.info {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.resume-section .education span.year,
+.resume-section .experience span.year {
+  height: 100%;
+  left: -10px;
+  top: 0;
+  position: absolute;
+}
+
+.resume-section .education span.year span,
+.resume-section .experience span.year span {
+  font-size: 16px;
+  position: absolute;
+  -webkit-transform: translateX(-120%);
+  -ms-transform: translateX(-120%);
+  transform: translateX(-120%);
+  color: #222;
+}
+
+.resume-section .education span.year span.to,
+.resume-section .experience span.year span.to {
+  top: -18px;
+}
+
+.resume-section .education span.year span.from,
+.resume-section .experience span.year span.from {
+  bottom: -18px;
+}
+
+.resume-section .skills {
+  margin-bottom: 30px;
+}
+
+.resume-section .skills .skill-item {
+  padding: 0 20px;
+}
+ul.experience .content h5,
+ul.education .content h5 {
+  color: var(--primary);
+}
+#service span{
+  font-size: 4.5em;
+  top: -16%;
+  left: 2%;
+  background-color: white;
+}
+#service .serviceBx, .contactBx{
+  border: 1px solid rgb(0 0 0 / 10%);
+  box-shadow: 0 0 13px rgb(0 0 0 / 10%);
+}
+
+#contact span{
+  font-size: 4.5em;
+}
